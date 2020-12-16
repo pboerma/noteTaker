@@ -1,31 +1,23 @@
-// Require Dependencies
+// add required modules
 const express = require("express");
-const fs = require("fs");
-const path = require('path');
+const path = require("path");
 
-// Initialize express app
+// Create server application at port 3000
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
-//Parsing
-
-app.use(express.urlencoded({ extended: true }));
+// Read URL or JSON
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(express.static("./public/"));
 
-//Require routes file/ folder required
-
+// Include js files
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-// Get server to listen
+// Use public folder
+app.use(express.static("public"));
 
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-  });
-  
-
-
-
-
+// Add listener
+app.listen(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
+});
