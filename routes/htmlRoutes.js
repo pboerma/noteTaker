@@ -3,12 +3,12 @@ const path = require("path");
 
 module.exports = function(app){
     
-    // Route to go to notes page
+    // Notes page routing
     app.get("/notes", function(req, res){
         res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
-    // Route to go to index page
+    // Index page Routing
     app.get("/", function(req, res){
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
