@@ -15,7 +15,7 @@ Navigate to the developer-profile-generator folder using the command prompt.
 Run npm install to install all dependencies. To use the application locally, run node server.js in your CLI, and then open http://localhost:3000 in your preferred browswer.
 
 
-![screenshot](https://github.com/pboerma/noteTaker\Develop\public\assets\Notetaker.png)
+![screenshot](https://github.com/pboerma/noteTaker/blob/main/public/assets/Notetaker.png)
 
 # Deployed link
 
